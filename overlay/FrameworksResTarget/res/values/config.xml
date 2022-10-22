@@ -58,7 +58,7 @@
         <item>/apex/com.android.art/javalib/core-libart.jar</item>
     </string-array>
 
-     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
           when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
           where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
           and Strength as defined in Authenticators.java -->
@@ -82,4 +82,7 @@
          fp screen off unlock-->
      <bool name="config_screen_off_udfps_default_on">true</bool>
  
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
 </resources>
