@@ -53,6 +53,15 @@ int32_t getTorchDefaultStrengthLevelExt() {
 int32_t getTorchMaxStrengthLevelExt() {
     // 200 (out of 500) is a sane max brightness
     return 200;
+int32_t getTorchDefaultStrengthLevelExt() {
+    return 7;
+}
+
+int32_t getTorchMaxStrengthLevelExt() {
+    // In our device, both LEDs has same maximum value
+    // so get from one.
+    auto node = kTorchLedPaths[0] + "/" + TORCH_MAX_BRIGHTNESS;
+    return get(node, 0);
 }
 
 int32_t getTorchStrengthLevelExt() {
@@ -75,4 +84,7 @@ void setTorchStrengthLevelExt(int32_t torchStrength, bool enabled) {
 void setTorchModeExt(bool enabled) {
     int32_t strength = getTorchDefaultStrengthLevelExt();
     setTorchStrengthLevelExt(enabled ? strength : 0, enabled);
+}
+    if (torchStrength > 0)
+        set(TOGGLE_SWITCH, 255);
 }
