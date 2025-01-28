@@ -54,7 +54,7 @@ int32_t getTorchMaxStrengthLevelExt() {
     // 200 (out of 500) is a sane max brightness
     return 200;
 int32_t getTorchDefaultStrengthLevelExt() {
-    return 7;
+    return 50;
 }
 
 int32_t getTorchMaxStrengthLevelExt() {
@@ -91,5 +91,5 @@ void setTorchModeExt(bool enabled) {
 
 void setTorchModeExt(bool enabled) {
     int32_t strength = getTorchDefaultStrengthLevelExt();
-    setTorchStrengthLevelExt(enabled ? strength : 0);
+    setTorchStrengthLevelExt(enabled ? strength : 0, enabled);
 }
