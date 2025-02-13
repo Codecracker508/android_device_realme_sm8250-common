@@ -262,6 +262,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
+# UFFD GC
+OVERRIDE_ENABLE_UFFD_GC := false
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.oplus-multihal \
