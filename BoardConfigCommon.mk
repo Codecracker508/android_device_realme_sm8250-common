@@ -90,6 +90,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=realme
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
+KERNEL_FULL_LLVM := true
 
 # Media
 TARGET_USES_ION := true
