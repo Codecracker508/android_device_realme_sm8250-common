@@ -10,15 +10,6 @@
             <instance>eSE1</instance>
         </interface>
     </hal>
-    <hal format="aidl">
-        <name>vendor.nxp.nxpnfc</name>
-        <transport>hwbinder</transport>
-        <version>1</version>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
         <transport>hwbinder</transport>
