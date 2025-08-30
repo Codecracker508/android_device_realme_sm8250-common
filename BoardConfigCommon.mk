@@ -99,9 +99,6 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
 KERNEL_FULL_LLVM := true
 
-# Media
-TARGET_USES_ION := true
-
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
