@@ -3,3 +3,13 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
+# spartan
+on property:ro.boot.prjname=21623
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=21732
+    setprop ro.boot.hardware.revision "IN"
+
+on property:ro.boot.prjname=21733
+    setprop ro.boot.hardware.revision "EU"

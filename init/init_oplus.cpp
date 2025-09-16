@@ -38,6 +38,35 @@ void OverrideProperty(const char* name, const char* value) {
  * after the original property has been set.
  */
 void vendor_load_properties() {
+    auto prjname_string = GetProperty("ro.boot.prjname", "0");
+    int prjname = 0;
+    char* end;
+    long val;
+
+        val = strtol(prjname_string.c_str(), &end, 10);
+
+    if (*end != '\0') {
+        LOG(ERROR) << "Invalid project name format: " << prjname_string;
+        return;
+    }
+
+    prjname = static_cast<int>(val);
+
+    switch (prjname) {
+        case 21623: // spartan CN
+            OverrideProperty("ro.product.product.model", "RMX3372");
+            OverrideProperty("ro.product.product.device", "RE5477");
+            OverrideProperty("ro.product.marketname", "realme Q5 Pro");
+            break;
+        case 21732: // spartan IN
+        case 21733: // spartan EU
+            OverrideProperty("ro.product.product.model", "RMX3371");
+            OverrideProperty("ro.product.product.device", "RE54E4L1");
+            OverrideProperty("ro.product.marketname", "realme GT NEO 3T");
+            break;
+        default:
+            LOG(ERROR) << "Unexpected project name: " << prjname;
+    }
 
     if (std::string content; ReadFileToString("/proc/devinfo/ddr_type", &content)) {
         OverrideProperty("ro.boot.ddr_type", Split(Trim(content), "\t").back().c_str());
