@@ -119,7 +119,8 @@ PRODUCT_COPY_FILES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    DSPVolumeSynchronizer
+    DSPVolumeSynchronizer \
+    RealmeAddons
 
 # Display
 PRODUCT_PACKAGES += \
