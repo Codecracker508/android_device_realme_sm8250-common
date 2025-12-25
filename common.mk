@@ -419,4 +419,4 @@ PRODUCT_PACKAGES += \
 TARGET_ENABLE_BLUR := true
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
+$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
